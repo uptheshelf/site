@@ -104,11 +104,11 @@ export default function FeatureList() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
-                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
                   />
                 }
               >
-                Use your favourite tools together, stop compromising between speed and complexity
+                Use your favourite tools together, stop compromising between speed and complexity. Use SQL, Excel-like functions, Python and JS to get the things done
               </Feature>
 
               <Feature
@@ -122,29 +122,26 @@ export default function FeatureList() {
                   />
                 }
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                Free and extensible software. Self-host it, make plugins and contribute. Forget about 3rd party liabilities, vendor lock-in
+                and lack of flexibility 
               </Feature>
 
               <Feature
-                title="Transfers are instant"
+                title="API Platform"
                 icon={
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
                   />
                 }
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                Turn any code snippet into API endpoint, embed it in other applications and create simple interfaces using Streamlit 
               </Feature>
 
               <Feature
-                title="Mobile notifications"
+                title="Notifications, cron jobs and data diffs"
                 icon={
                   <path
                     strokeLinecap="round"
@@ -154,9 +151,7 @@ export default function FeatureList() {
                   />
                 }
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                Turn your scripts into workflows, build reports and send notifications
               </Feature>
             </Stack>
           </Box>
