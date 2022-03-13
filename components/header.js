@@ -259,7 +259,12 @@ export default function Header() {
       bg={bg}
       spacing={3}
       rounded="sm"
-      shadow="sm"
+      shadow="md"
+      boxShadow="md"
+      zIndex={200}
+      borderColor={'grey'}
+      borderWidth={0.3}
+      borderStyle={'solid'}
     >
       <CloseButton
         aria-label="Close menu"
@@ -271,8 +276,7 @@ export default function Header() {
       </Button>
       <Button
         w="full"
-        variant="solid"
-        colorScheme="brand"
+        variant="ghost"
         leftIcon={<AiOutlineInbox />}
       >
         Inbox
@@ -287,12 +291,13 @@ export default function Header() {
       <chakra.header
         ref={ref}
         shadow={y > height ? "sm" : undefined}
-        transition="box-shadow 0.2s"
+        sx={{ position: '-webkit-sticky', /* Safari */ position: 'sticky', top: '0', }}
+        zIndex={200}
         bg={bg}
-        borderTop="6px solid"
-        borderTopColor="brand.400"
+        // borderTop="6px solid"
+        // borderTopColor="brand.400"
         w="full"
-        overflowY="hidden"
+        // overflowY="hidden"
       >
         <chakra.div h="4.5rem" mx="auto" maxW="1200px">
           <Flex
@@ -303,7 +308,7 @@ export default function Header() {
             justifyContent="space-between"
           >
             <Flex align="flex-start">
-              <Link href="/">
+              <Link _focus={{boxShadow: "none"}} href="/">
                 <HStack>
                   {
                     text === 'light' ?
@@ -317,29 +322,17 @@ export default function Header() {
             </Flex>
             <Flex>
               <HStack spacing="5" display={{ base: "none", md: "flex" }}>
-                <Popover>
-                  <PopoverTrigger>
-                    <Button
-                      bg={bg}
-                      color="gray.500"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="md"
-                      _hover={{ color: cl }}
-                      _focus={{ boxShadow: "none" }}
-                      rightIcon={<IoIosArrowDown />}
-                    >
-                      Features
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent
-                    w="100vw"
-                    maxW="md"
-                    _focus={{ boxShadow: "md" }}
-                  >
-                    <Features />
-                  </PopoverContent>
-                </Popover>
+                <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: "none" }}
+                >
+                  Features
+                </Button>
                 <Button
                   bg={bg}
                   color="gray.500"
@@ -351,27 +344,13 @@ export default function Header() {
                 >
                   Blog
                 </Button>
-                <Button
-                  bg={bg}
-                  color="gray.500"
-                  display="inline-flex"
-                  alignItems="center"
-                  fontSize="md"
-                  _hover={{ color: cl }}
-                  _focus={{ boxShadow: "none" }}
-                >
-                  Pricing
-                </Button>
               </HStack>
             </Flex>
             <Spacer />
             <Flex justify="flex-end" align="center" color="gray.400">
               <HStack spacing="5" display={{ base: "none", md: "flex" }}>
-                <Button colorScheme="brand" variant="ghost" size="sm">
-                  Sign in
-                </Button>
                 <Button colorScheme="brand" variant="solid" size="sm">
-                  Sign up
+                  Join waitlist
                 </Button>
               </HStack>
               <IconButton

@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { Image } from '@chakra-ui/react'
 
 
 export const Logo = (props) => {
@@ -7,7 +7,7 @@ export const Logo = (props) => {
             src={'/logo.svg'}
             alt={'Uptheshelf logo'}
             width={300}
-            height={100}
+            height={'100%'}
         />
     )
 }
@@ -18,7 +18,7 @@ export const LogoWhite = (props) => {
             src={'/logo_white.svg'}
             alt={'Uptheshelf logo'}
             width={300}
-            height={100}
+            height={'100%'}
 
         />
     )

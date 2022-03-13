@@ -42,13 +42,13 @@ const KuttyHero = () => {
                 color={useColorModeValue("gray.900", "white")}
               >
                 <chakra.span display={{ base: "block", xl: "inline" }}>
-                  Data to enrich your{" "}
+                  Open-source data platform for{" "}
                 </chakra.span>
                 <chakra.span
                   display={{ base: "block", xl: "inline" }}
                   color={useColorModeValue("brand.600", "brand.400")}
                 >
-                  online business
+                  developers
                 </chakra.span>
               </chakra.h1>
               <chakra.p
@@ -59,11 +59,18 @@ const KuttyHero = () => {
                 color="gray.500"
                 lineHeight="base"
               >
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua.
+                {/* BI tools are clunky. Pure code is time consuming. 
+                <b style={{color: '#FBB040'}}> UPTHESHELF</b> combines SQL, no-code, Python 🐍 and JS
+                alongside scheduling, data diffs, notifications and ML <br/>
+                on top of your <b>data warehouse.</b>
+                <br/>
+                🧑‍💻 Code-driven data analysis made simple. */}
+                BI tools are not flexible enough for developers. UpTheShelf enables code-driven analysis
+                on top of data warehouse thanks to lambda functions, cron jobs, data diffs and templating.
+                <br/>
+                Be the first to try it out 👇
               </chakra.p>
-              <Stack
+              <Stack 
                 direction={{ base: "column", sm: "column", md: "row" }}
                 mb={{ base: 4, md: 8 }}
                 spacing={{ base: 4, md: 2 }}
@@ -100,13 +107,10 @@ const KuttyHero = () => {
                         border="solid 1px transparent"
                         fontSize={{ base: "md", md: "lg" }}
                         rounded="md"
-                        color="brand.700"
-                        bg="brand.600"
-                        _hover={{ bg: "brand.700" }}
                         px={{ base: 8, md: 10 }}
                         py={{ base: 3, md: 4 }}
                     >
-                        Get Started
+                        Join waitlist
                     </Button>
                 </SimpleGrid>
                 {/* <Box rounded="full" shadow="md">
