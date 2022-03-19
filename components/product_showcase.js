@@ -46,7 +46,7 @@ const ProductShowcase = () => {
         >
           Find data assets, ask business questions and turn them into APIs, data apps and jobs.
           <br/>
-          UpTheShelf is the best way to make your company's analytics more powerful and flexible.
+          UpTheShelf is the best way to make your company&apos;s analytics more powerful and flexible.
         </chakra.p>
         <Stack
           direction={{ base: "column", sm: "row" }}
