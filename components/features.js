@@ -61,7 +61,7 @@ export default function FeatureList() {
         <Box maxW="7xl" mx="auto" px={{ base: 4, lg: 8 }}>
           <Box textAlign={{ lg: "center" }}>
             <chakra.h2
-              color={useColorModeValue("brand.600")}
+              color={useColorModeValue("brand.600", "brand.600")}
               fontWeight="semibold"
               textTransform="uppercase"
               letterSpacing="wide"
