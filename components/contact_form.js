@@ -127,8 +127,9 @@ import { useState } from 'react';
                           <InputGroup borderColor="#E0E1E7">
                             <InputLeftElement
                               pointerEvents="none"
-                              children={<BsPerson color="gray.800" />}
-                            />
+                            >
+                                <BsPerson color="gray.800" />
+                            </InputLeftElement>
                             <Input type="text" size="md" 
                             onChange={e => setFormData({...formData, name: e.target.value})}
                             value={formData.name}
@@ -141,8 +142,9 @@ import { useState } from 'react';
                           <InputGroup borderColor="#E0E1E7">
                             <InputLeftElement
                               pointerEvents="none"
-                              children={<MdOutlineEmail color="gray.800" />}
-                            />
+                            >
+                                <MdOutlineEmail color="gray.800" />
+                            </InputLeftElement>
                             <Input type="text" size="md" 
                             onChange={e => setFormData({...formData, email: e.target.value})}
                             value={formData.email}
@@ -168,8 +170,9 @@ import { useState } from 'react';
                           <InputGroup borderColor="#E0E1E7">
                             <InputLeftElement
                               pointerEvents="none"
-                              children={<MdCalculate color="gray.800" />}
-                            />
+                            >
+                                <MdCalculate color="gray.800" />
+                            </InputLeftElement>
                             <Input type="text" size="md" 
                             onChange={e => setFormData({...formData, calculation: e.target.value})}
                             value={formData.calculation}
