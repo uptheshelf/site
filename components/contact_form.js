@@ -33,23 +33,6 @@ import { useState } from 'react';
 
     const [error, setError] = useState('');
 
-    const handleSubmit = event => {
-        event.preventDefault();
-
-        if (formData.calculation === '7') {
-            setError('');
-            window.location.href = "mailto:kotuaigor@gmail.com";
-            return;
-        }
-
-        else {
-            console.log('error');
-            setError('Wrong calculation');
-            return;
-        }
-
-
-    }
 
     return (
       <Container bg={useColorModeValue("#F9FAFB", "gray.600")} maxW="full" mt={0} centerContent overflow="hidden">
@@ -138,7 +121,7 @@ import { useState } from 'react';
                   <Box bg="white" borderRadius="lg">
                     <Box m={8} color="#0B0E3F">
                       <VStack spacing={5}>
-                        <form onSubmit={handleSubmit}>
+                        <form method='post' action='https://getform.io/f/975dfde6-ef2b-46b7-a7f1-96a7850fdec0'>
                         <FormControl id="name" isRequired>
                           <FormLabel>Your Name</FormLabel>
                           <InputGroup borderColor="#E0E1E7">
@@ -149,6 +132,7 @@ import { useState } from 'react';
                             <Input type="text" size="md" 
                             onChange={e => setFormData({...formData, name: e.target.value})}
                             value={formData.name}
+                            name='name'
                             />
                           </InputGroup>
                         </FormControl>
@@ -162,6 +146,7 @@ import { useState } from 'react';
                             <Input type="text" size="md" 
                             onChange={e => setFormData({...formData, email: e.target.value})}
                             value={formData.email}
+                            name='email'
                             />
                           </InputGroup>
                         </FormControl>
@@ -175,6 +160,7 @@ import { useState } from 'react';
                             placeholder="message"
                             onChange={e => setFormData({...formData, message: e.target.value})}
                             value={formData.message}
+                            name='message'
                           />
                         </FormControl>
                         <FormControl id="calculation" isRequired mb={3} isInvalid={error !== ''}>
@@ -187,6 +173,7 @@ import { useState } from 'react';
                             <Input type="text" size="md" 
                             onChange={e => setFormData({...formData, calculation: e.target.value})}
                             value={formData.calculation}
+                            name='calculation'
                             />
                           </InputGroup>
                         </FormControl>

@@ -41,22 +41,9 @@ export default function FormFooter() {
           direction={{ base: 'column', md: 'row' }}
           as={'form'}
           spacing={'12px'}
-          onSubmit={(e) => {
-            e.preventDefault();
-            setError(false);
-            setState('submitting');
-
-            // remove this code and implement your submit logic right here
-            setTimeout(() => {
-              if (email === 'fail@example.com') {
-                setError(true);
-                setState('initial');
-                return;
-              }
-
-              setState('success');
-            }, 1000);
-          }}>
+          method={'post'}
+          action='https://getform.io/f/975dfde6-ef2b-46b7-a7f1-96a7850fdec0'
+          >
           <FormControl>
             <Input
               variant={'solid'}
@@ -68,6 +55,7 @@ export default function FormFooter() {
               borderColor={useColorModeValue('gray.300', 'gray.700')}
               id={'email'}
               type={'email'}
+              name={'email'}
               required
               placeholder={'Your Email'}
               aria-label={'Your Email'}

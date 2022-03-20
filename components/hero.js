@@ -98,25 +98,26 @@ const KuttyHero = () => {
                             type="email"
                             placeholder="Enter your email..."
                             required="true"
+                            name={'email'}
                         />
                     </GridItem>
-                    <Button
-                        as={GridItem}
-                        w="full"
-                        variant="solid"
-                        colSpan={{ base: "auto", lg: 2 }}
-                        size="lg"
-                        type="submit"
-                        colorScheme="brand"
-                        cursor="pointer"
-                        border="solid 1px transparent"
-                        fontSize={{ base: "md", md: "lg" }}
-                        rounded="md"
-                        px={{ base: 8, md: 10 }}
-                        py={{ base: 3, md: 4 }}
-                    >
-                        Join waitlist
-                    </Button>
+                    <GridItem colSpan={{ base: "auto", lg: 2 }}>
+                      <Button              
+                          w="full"
+                          variant="solid"
+                          size="lg"
+                          type="submit"
+                          colorScheme="brand"
+                          cursor="pointer"
+                          border="solid 1px transparent"
+                          fontSize={{ base: "md", md: "lg" }}
+                          rounded="md"
+                          px={{ base: 8, md: 10 }}
+                          py={{ base: 3, md: 4 }}
+                      >
+                          Join waitlist
+                      </Button>
+                    </GridItem>
                 </SimpleGrid>
                 {/* <Box rounded="full" shadow="md">
                   <chakra.a
