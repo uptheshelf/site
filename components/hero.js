@@ -46,7 +46,10 @@ const KuttyHero = () => {
                 </chakra.span>
                 <chakra.span
                   display={{ base: "block", xl: "inline" }}
-                  color={useColorModeValue("brand.600", "brand.400")}
+                  w="full"
+                  bgClip="text"
+                  bgGradient="linear(to-r, #FBB040, #EF4136)"
+                  fontWeight="extrabold"
                 >
                   developers
                 </chakra.span>
@@ -84,6 +87,8 @@ const KuttyHero = () => {
                 pt={1}
                 mx="auto"
                 mb={8}
+                action="https://getform.io/f/975dfde6-ef2b-46b7-a7f1-96a7850fdec0" 
+                method="POST"
                 >
                     <GridItem as="label" colSpan={{ base: "auto", lg: 4 }}>
                         <VisuallyHidden>Your Email</VisuallyHidden>

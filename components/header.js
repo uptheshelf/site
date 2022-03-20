@@ -27,7 +27,7 @@ import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
 import {Logo, LogoWhite } from "../components/logo";
 
-export default function Header() {
+export default function Header({onOpen}) {
   const { toggleColorMode: toggleMode } = useColorMode();
   const text = useColorModeValue("light", "dark");
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
@@ -331,7 +331,9 @@ export default function Header() {
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: "none" }}
                 >
-                  Features
+                  <Link href="#product-showcase">
+                    Product
+                  </Link>
                 </Button>
                 <Button
                   bg={bg}
@@ -342,14 +344,16 @@ export default function Header() {
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: "none" }}
                 >
-                  Blog
+                  <Link href="#feature-list">
+                    Features
+                  </Link>
                 </Button>
               </HStack>
             </Flex>
             <Spacer />
             <Flex justify="flex-end" align="center" color="gray.400">
               <HStack spacing="5" display={{ base: "none", md: "flex" }}>
-                <Button colorScheme="brand" variant="solid" size="sm">
+                <Button colorScheme="brand" variant="solid" size="sm" onClick={() => onOpen()}>
                   Join waitlist
                 </Button>
               </HStack>

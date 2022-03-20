@@ -8,7 +8,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 
-export default function FeatureList() {
+export default function FeatureList({id}) {
   const Feature = (props) => {
     return (
       <Flex>
@@ -51,6 +51,7 @@ export default function FeatureList() {
   };
   return (
     <Flex
+      id={id}
       bg={useColorModeValue("#F9FAFB", "gray.600")}
       p={20}
       w="auto"

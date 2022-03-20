@@ -10,9 +10,9 @@ import {
   Icon,
 } from "@chakra-ui/react";
 
-const ProductShowcase = () => {
+const ProductShowcase = (props) => {
   return (
-    <Box px={8} py={24} mx="auto">
+    <Box px={8} py={24} mx="auto" id={props.id}>
       <Box
         w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
         mx="auto"
@@ -65,6 +65,7 @@ const ProductShowcase = () => {
             mb={{ base: 2, sm: 0 }}
             size="lg"
             cursor="pointer"
+            onClick={() => props.onOpen()}
           >
             Join waitlist
             <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">

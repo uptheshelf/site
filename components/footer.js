@@ -71,8 +71,8 @@ import {
           align={'center'}>
           <Logo />
           <Stack direction={'row'} spacing={6}>
-            <Link href={'#'}>Home</Link>
-            <Link href={'#'}>Contact</Link>
+            <Link href={'/'}>Home</Link>
+            <Link href={'/contact'}>Contact</Link>
           </Stack>
         </Container>
   
@@ -90,15 +90,15 @@ import {
             align={{ base: 'center', md: 'center' }}>
             <Text>© 2022 UpTheShelf. All rights reserved</Text>
             <Stack direction={'row'} spacing={6}>
-              <SocialButton label={'Twitter'} href={'#'}>
+              {/* <SocialButton label={'Twitter'} href={'#'}>
                 <FaTwitter />
-              </SocialButton>
-              <SocialButton label={'GitHub'} href={'#'}>
+              </SocialButton> */}
+              <SocialButton label={'GitHub'} href={'https://github.com/uptheshelf'}>
                 <FaGithub />
               </SocialButton>
-              <SocialButton label={'LinkedIn'} href={'#'}>
+              {/* <SocialButton label={'LinkedIn'} href={'#'}>
                 <FaLinkedin />
-              </SocialButton>
+              </SocialButton> */}
             </Stack>
           </Container>
         </Box>
